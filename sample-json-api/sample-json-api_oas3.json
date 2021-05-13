@@ -2,7 +2,7 @@
     "openapi": "3.0.2",
     "info": {
         "title": "Sample JSON Validation API",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "description": "A simple API to test the Camel json-schema-validator component",
         "contact": {
             "name": "Jean Nyilimbibi"
