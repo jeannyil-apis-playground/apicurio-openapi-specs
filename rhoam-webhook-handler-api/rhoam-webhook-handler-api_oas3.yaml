@@ -25,14 +25,96 @@ paths:
             schema:
               type: string
             examples:
-              applicationUpdateXMLEvent:
+              accountCreatedXmlEvent:
                 value: |-
                   <?xml version="1.0" encoding="UTF-8"?>
                   <event>
-                    <type>application</type>
-                    <action>updated</action>
+                    <action>created</action>
+                    <type>account</type>
                     <object>
-                      THE APPLICATION OBJECT AS WOULD BE RETURNED BY A GET ON THE ACCOUNT MANAGEMENT API
+                      <account>
+                        <id>6</id>
+                        <created_at>2021-05-14T20:22:53Z</created_at>
+                        <updated_at>2021-05-14T20:22:53Z</updated_at>
+                        <state>created</state>
+                        <org_name>TestAccount</org_name>
+                        <extra_fields/>
+                        <monthly_billing_enabled>true</monthly_billing_enabled>
+                        <monthly_charging_enabled>true</monthly_charging_enabled>
+                        <credit_card_stored>false</credit_card_stored>
+                        <plans>
+                          <plan default="true">
+                            <id>6</id>
+                            <name>Default</name>
+                            <type>account_plan</type>
+                            <state>hidden</state>
+                            <approval_required>false</approval_required>
+                            <setup_fee>0.0</setup_fee>
+                            <cost_per_month>0.0</cost_per_month>
+                            <trial_period_days/>
+                            <cancellation_period>0</cancellation_period>
+                          </plan>
+                        </plans>
+                        <users>
+                          <user>
+                            <id>9</id>
+                            <created_at>2021-05-14T20:22:53Z</created_at>
+                            <updated_at>2021-05-14T20:22:53Z</updated_at>
+                            <account_id>6</account_id>
+                            <state>pending</state>
+                            <role>admin</role>
+                            <username>admin</username>
+                            <email>admin@acme.org</email>
+                            <extra_fields/>
+                          </user>
+                        </users>
+                      </account>
+                    </object>
+                  </event>
+              accountDeletedXmlEvent:
+                value: |-
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <event>
+                    <action>updated</action>
+                    <type>account</type>
+                    <object>
+                      <account>
+                        <id>6</id>
+                        <created_at>2021-05-14T20:22:53Z</created_at>
+                        <updated_at>2021-05-14T20:22:53Z</updated_at>
+                        <state>approved</state>
+                        <org_name>TestAccount</org_name>
+                        <extra_fields/>
+                        <monthly_billing_enabled>true</monthly_billing_enabled>
+                        <monthly_charging_enabled>true</monthly_charging_enabled>
+                        <credit_card_stored>false</credit_card_stored>
+                        <plans>
+                          <plan default="true">
+                            <id>6</id>
+                            <name>Default</name>
+                            <type>account_plan</type>
+                            <state>hidden</state>
+                            <approval_required>false</approval_required>
+                            <setup_fee>0.0</setup_fee>
+                            <cost_per_month>0.0</cost_per_month>
+                            <trial_period_days/>
+                            <cancellation_period>0</cancellation_period>
+                          </plan>
+                        </plans>
+                        <users>
+                          <user>
+                            <id>9</id>
+                            <created_at>2021-05-14T20:22:53Z</created_at>
+                            <updated_at>2021-05-14T20:22:53Z</updated_at>
+                            <account_id>6</account_id>
+                            <state>pending</state>
+                            <role>admin</role>
+                            <username>admin</username>
+                            <email>admin@acme.org</email>
+                            <extra_fields/>
+                          </user>
+                        </users>
+                      </account>
                     </object>
                   </event>
         required: true
