@@ -14,8 +14,8 @@
     },
     "servers": [
         {
-            "url": "http://rhoam-events-to-amqp-api.apps.jeannyil.sandbox438.opentlc.com",
-            "description": ""
+            "url": "http://rhoam-webhook-events-handler-api.apps.jeannyil.sandbox438.opentlc.com",
+            "description": "API Backend URL"
         }
     ],
     "paths": {
