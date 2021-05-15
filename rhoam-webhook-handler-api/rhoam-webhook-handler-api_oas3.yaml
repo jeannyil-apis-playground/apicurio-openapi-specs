@@ -36,11 +36,11 @@ paths:
       requestBody:
         description: RHOAM Admin/Developer Portal webhook event in XML format
         content:
-          text/xml:
+          application/xml:
             schema:
               type: string
             examples:
-              accountCreatedXmlEvent:
+              accountCreated:
                 value: |-
                   <?xml version="1.0" encoding="UTF-8"?>
                   <event>
@@ -86,7 +86,7 @@ paths:
                       </account>
                     </object>
                   </event>
-              accountDeletedXmlEvent:
+              accountUpdated:
                 value: |-
                   <?xml version="1.0" encoding="UTF-8"?>
                   <event>
@@ -131,6 +131,46 @@ paths:
                         </users>
                       </account>
                     </object>
+                  </event>
+          text/xml:
+            schema:
+              type: string
+            examples:
+              applicationPlanChanged:
+                value: |-
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <event>
+                      <action>plan_changed</action>
+                      <type>application</type>
+                      <object>
+                          <application>
+                              <id>11</id>
+                              <created_at>2021-05-14T21:08:26Z</created_at>
+                              <updated_at>2021-05-15T01:37:53Z</updated_at>
+                              <state>live</state>
+                              <user_account_id>7</user_account_id>
+                              <first_traffic_at />
+                              <first_daily_traffic_at />
+                              <service_id>2</service_id>
+                              <user_key>24dfa552d2b54907db559a47362bc9a8</user_key>
+                              <provider_verification_key>3758600979422b1b697583de17d4e8a7</provider_verification_key>
+                              <plan custom="false" default="false">
+                                  <id>8</id>
+                                  <name>Unlimited</name>
+                                  <type>application_plan</type>
+                                  <state>published</state>
+                                  <approval_required>false</approval_required>
+                                  <setup_fee>0.0</setup_fee>
+                                  <cost_per_month>0.0</cost_per_month>
+                                  <trial_period_days />
+                                  <cancellation_period>0</cancellation_period>
+                                  <service_id>2</service_id>
+                              </plan>
+                              <name>TestAccount's App</name>
+                              <description>TestAccount's Application to the Echo API Product</description>
+                              <extra_fields></extra_fields>
+                          </application>
+                      </object>
                   </event>
         required: true
       responses:
