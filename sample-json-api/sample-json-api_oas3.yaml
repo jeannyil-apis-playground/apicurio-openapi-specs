@@ -61,8 +61,7 @@ paths:
                       - "java.lang.Exception: Mocked error message"
           description: Internal server error
       security:
-      - oauth2:
-        - openid
+      - ApiKeyAuth: []
       operationId: validateMembershipJSON
       summary: Validate Membership JSON instance
       description: Validates a `Membership` JSON instance
@@ -168,19 +167,9 @@ components:
           messages:
           - "java.lang.Exception: Mocked error message"
   securitySchemes:
-    oauth2:
-      flows:
-        clientCredentials:
-          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          scopes:
-            openid: OpenID Connect Protocol
-        authorizationCode:
-          authorizationUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/auth
-          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          refreshUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          scopes:
-            openid: OpenID Connect protocol
-      type: oauth2
+    ApiKeyAuth:
+      type: apiKey
+      name: user_key
+      in: header
 security:
-- oauth2:
-  - openid
+- ApiKeyAuth: []
