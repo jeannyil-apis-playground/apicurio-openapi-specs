@@ -2,7 +2,7 @@
 openapi: 3.0.2
 info:
   title: Sample JSON Validation API
-  version: 1.0.0
+  version: 1.0.1
   description: A simple API to test the Camel json-schema-validator component
   contact:
     name: Jean Nyilimbibi
@@ -60,8 +60,6 @@ paths:
                       messages:
                       - "java.lang.Exception: Mocked error message"
           description: Internal server error
-      security:
-      - ApiKeyAuth: []
       operationId: validateMembershipJSON
       summary: Validate Membership JSON instance
       description: Validates a `Membership` JSON instance
@@ -121,12 +119,12 @@ components:
         requestID: 5948
         memberID: 85623617
         status: A
-        enrolmentDate: 2019-06-16
+        enrolmentDate: 2019-06-16T00:00:00.000Z
         changedBy: jeanNyil
         forcedLevelCode: "69"
         vipOnInvitation: "Y"
-        startDate: 2019-06-16
-        endDate: 2100-06-16
+        startDate: 2019-06-16T00:00:00.000Z
+        endDate: 2100-06-16T00:00:00.000Z
     ValidationResult:
       description: 'Validation Result   '
       type: object
@@ -167,9 +165,13 @@ components:
           messages:
           - "java.lang.Exception: Mocked error message"
   securitySchemes:
-    ApiKeyAuth:
-      type: apiKey
-      name: user_key
-      in: header
+    oauth2:
+      flows:
+        clientCredentials:
+          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
+          scopes:
+            openid: OpenID Connect Protocol
+      type: oauth2
 security:
-- ApiKeyAuth: []
+- oauth2:
+  - openid
