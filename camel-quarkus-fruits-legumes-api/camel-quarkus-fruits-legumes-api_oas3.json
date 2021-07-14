@@ -214,22 +214,12 @@
                 "flows": {
                     "clientCredentials": {
                         "tokenUrl": "https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
-                        "refreshUrl": "https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
                         "scopes": {
-                            "openid": "OpenID Connect scope"
-                        }
-                    },
-                    "authorizationCode": {
-                        "authorizationUrl": "https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/auth",
-                        "tokenUrl": "https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
-                        "refreshUrl": "https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
-                        "scopes": {
-                            "openid": "OpenID Connect scope"
+                            "openid": "OpenID Connect Protocol"
                         }
                     }
                 },
-                "type": "oauth2",
-                "description": "OpenID Connect protocol"
+                "type": "oauth2"
             }
         }
     },
