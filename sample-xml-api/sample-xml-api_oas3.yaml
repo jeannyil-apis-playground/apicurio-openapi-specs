@@ -143,3 +143,14 @@ components:
       example: "{\n\t\"error\": {\n\t\t\"id\": \"500\",\n\t\t\"description\": \"Internal\
         \ Server Error\",\n\t\t\"messages\": [\n\t\t\t\"java.lang.Exception: Mocked\
         \ error message\"\n\t\t]\n\t}\n}"
+  securitySchemes:
+    oauth2:
+      flows:
+        clientCredentials:
+          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
+          scopes:
+            openid: OpenID Connect Protocol
+      type: oauth2
+security:
+- oauth2:
+  - openid
