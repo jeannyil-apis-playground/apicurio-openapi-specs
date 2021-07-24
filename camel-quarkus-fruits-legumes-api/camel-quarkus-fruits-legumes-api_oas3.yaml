@@ -132,6 +132,7 @@ components:
     oauth2:
       flows:
         clientCredentials:
+<<<<<<< HEAD
           tokenUrl: https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           refreshUrl: https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
@@ -142,8 +143,12 @@ components:
           refreshUrl: https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
             openid: OpenID Connect scope
+=======
+          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
+          scopes:
+            openid: OpenID Connect Protocol
+>>>>>>> 6e65c7b66d53e34aa256489a173f28364a30f8a6
       type: oauth2
-      description: OpenID Connect protocol
 security:
 - oauth2:
   - openid
