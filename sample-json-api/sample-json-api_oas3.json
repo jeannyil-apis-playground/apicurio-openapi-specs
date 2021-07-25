@@ -14,7 +14,7 @@
     },
     "servers": [
         {
-            "url": "http://sample-json-validation-api.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com",
+            "url": "http://sample-json-validation-api.apps.jeannyil.sandbox1047.opentlc.com",
             "description": "API Backend URL"
         }
     ],
@@ -241,16 +241,16 @@
             "oauth2": {
                 "flows": {
                     "clientCredentials": {
-                        "tokenUrl": "https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "tokenUrl": "https://sso.apps.jeannyil.sandbox1047.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
                         "scopes": {
                             "openid": "OpenID Connect Protocol"
                         }
 <<<<<<< HEAD
                     },
                     "authorizationCode": {
-                        "authorizationUrl": "https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/auth",
-                        "tokenUrl": "https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
-                        "refreshUrl": "https://sso.apps.cluster-7kzfp.7kzfp.sandbox104.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "authorizationUrl": "https://sso.apps.jeannyil.sandbox1047.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/auth",
+                        "tokenUrl": "https://sso.apps.jeannyil.sandbox1047.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "refreshUrl": "https://sso.apps.jeannyil.sandbox1047.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
                         "scopes": {
                             "openid": "OpenID Connect protocol"
                         }
