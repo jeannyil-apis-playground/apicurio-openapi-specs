@@ -132,22 +132,9 @@ components:
     oauth2:
       flows:
         clientCredentials:
-<<<<<<< HEAD
           tokenUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          refreshUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          scopes:
-            openid: OpenID Connect scope
-        authorizationCode:
-          authorizationUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/auth
-          tokenUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          refreshUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
-          scopes:
-            openid: OpenID Connect scope
-=======
-          tokenUrl: https://sso.apps.jeannyil.sandbox1444.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
             openid: OpenID Connect Protocol
->>>>>>> 6e65c7b66d53e34aa256489a173f28364a30f8a6
       type: oauth2
 security:
 - oauth2:
