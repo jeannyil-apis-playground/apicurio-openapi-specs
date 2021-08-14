@@ -94,28 +94,6 @@
                         },
                         "description": "RHOAM XML event handled."
                     },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/ResponseMessage"
-                                },
-                                "examples": {
-                                    "responseMessageKO500": {
-                                        "value": {
-                                            "status": "KO",
-                                            "error": {
-                                                "code": "500",
-                                                "description": "Internal Server Error",
-                                                "message": "java.lang.Exception: Mocked error message"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "description": "Internal server error"
-                    },
                     "400": {
                         "content": {
                             "application/json": {
@@ -137,6 +115,28 @@
                             }
                         },
                         "description": "Bad Request"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseMessage"
+                                },
+                                "examples": {
+                                    "responseMessageKO500": {
+                                        "value": {
+                                            "status": "KO",
+                                            "error": {
+                                                "code": "500",
+                                                "description": "Internal Server Error",
+                                                "message": "java.lang.Exception: Mocked error message"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Internal server error"
                     }
                 },
                 "operationId": "sendToAMQPQueue",
@@ -203,6 +203,27 @@
                     "message": "java.lang.Exception: mocked error"
                 }
             }
+        },
+        "securitySchemes": {
+            "oauth2": {
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "scopes": {
+                            "openid": "OpenID Connect Protocol"
+                        }
+                    }
+                },
+                "type": "oauth2",
+                "description": "OpenID Connect"
+            }
         }
-    }
+    },
+    "security": [
+        {
+            "oauth2": [
+                "openid"
+            ]
+        }
+    ]
 }
