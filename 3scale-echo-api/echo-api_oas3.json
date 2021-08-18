@@ -1,0 +1,206 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Echo API",
+        "version": "1.0.0",
+        "description": "A sample echo API"
+    },
+    "servers": [
+        {
+            "url": "http://echo-api.3scale.net/"
+        }
+    ],
+    "paths": {
+        "/": {
+            "get": {
+                "responses": {
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "text/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            }
+                        },
+                        "description": "unexpected error"
+                    },
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "text/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            }
+                        },
+                        "description": "response"
+                    }
+                },
+                "operationId": "echo_no_params",
+                "description": "Echo API with no parameters"
+            }
+        },
+        "/{echo}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "echo",
+                        "description": "The string to be echoed",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "text/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            },
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorModel"
+                                }
+                            }
+                        },
+                        "description": "unexpected error"
+                    },
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "application/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "text/xml": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            },
+                            "text/html": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseModel"
+                                }
+                            }
+                        },
+                        "description": "response"
+                    }
+                },
+                "operationId": "echo_with_params",
+                "description": "Echo API with parameters"
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ResponseModel": {
+                "required": [
+                    "method",
+                    "path",
+                    "args",
+                    "headers"
+                ],
+                "type": "object",
+                "properties": {
+                    "method": {
+                        "type": "string"
+                    },
+                    "path": {
+                        "type": "string"
+                    },
+                    "args": {
+                        "type": "string"
+                    },
+                    "headers": {
+                        "type": "object"
+                    }
+                }
+            },
+            "ErrorModel": {
+                "required": [
+                    "code",
+                    "message"
+                ],
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "securitySchemes": {
+            "OIDC": {
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "scopes": {
+                            "openid": "OpenID Connect"
+                        }
+                    }
+                },
+                "type": "oauth2",
+                "description": "OpenID Connect"
+            }
+        }
+    },
+    "security": [
+        {
+            "OIDC": [
+                "openid"
+            ]
+        }
+    ]
+}
