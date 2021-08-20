@@ -61,5 +61,4 @@ components:
             openid: ""
       type: oauth2
 security:
-- oidc:
-  - openid
+- oidc: []
