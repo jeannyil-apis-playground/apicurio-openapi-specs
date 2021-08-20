@@ -226,7 +226,6 @@
     "security": [
         {
             "oauth2": [
-                "openid"
             ]
         }
     ]
