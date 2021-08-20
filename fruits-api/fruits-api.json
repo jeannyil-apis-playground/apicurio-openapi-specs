@@ -104,7 +104,6 @@
     "security": [
         {
             "oidc": [
-                "openid"
             ]
         }
     ]
