@@ -119,9 +119,8 @@ components:
         clientCredentials:
           tokenUrl: https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
-            apimgw:use: Allows to call the APIM gateways
+            openid: OpenID Connect
       type: oauth2
       description: OpenID Connect
 security:
-- OIDC:
-  - apimgw:use
+- OIDC: []
