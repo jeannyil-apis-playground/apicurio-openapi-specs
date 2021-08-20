@@ -270,5 +270,4 @@ components:
       type: oauth2
       description: OpenID Connect
 security:
-- oauth2:
-  - openid
+- oauth2: []
