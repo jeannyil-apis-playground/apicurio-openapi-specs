@@ -187,7 +187,7 @@
                     "clientCredentials": {
                         "tokenUrl": "https://sso.apps.jeannyil.sandbox1148.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
                         "scopes": {
-                            "openid": "OpenID Connect"
+                            "apimgw:use": "Allows to call the APIM gateways"
                         }
                     }
                 },
@@ -199,7 +199,7 @@
     "security": [
         {
             "OIDC": [
-                "openid"
+                "apimgw:use"
             ]
         }
     ]
