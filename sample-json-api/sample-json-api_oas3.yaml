@@ -141,8 +141,13 @@ components:
               type: string
             errorMessage:
               type: string
-      example: "{\n    \"validationResult\": {\n        \"status\": \"KO\",\n    \
-        \    \"errorMessage\": \"6 errors found\"\n    }\n}"
+      example: |-
+        {
+            "validationResult": {
+                "status": "KO",
+                "errorMessage": "6 errors found"
+            }
+        }
     Error:
       description: Error message structure
       type: object
@@ -173,5 +178,4 @@ components:
             openid: OpenID Connect Protocol
       type: oauth2
 security:
-- oauth2:
-  - openid
+- oauth2: []
