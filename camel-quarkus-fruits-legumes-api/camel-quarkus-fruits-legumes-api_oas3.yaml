@@ -137,5 +137,4 @@ components:
             openid: OpenID Connect Protocol
       type: oauth2
 security:
-- oauth2:
-  - openid
+- oauth2: []
