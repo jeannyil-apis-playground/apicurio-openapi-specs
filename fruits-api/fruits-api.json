@@ -91,7 +91,7 @@
             "oidc": {
                 "flows": {
                     "clientCredentials": {
-                        "tokenUrl": "https://sso.apps.jeannyil.sandbox452.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
+                        "tokenUrl": "https://sso.apps.jeannyil.sandbox430.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token",
                         "scopes": {
                             "openid": ""
                         }
