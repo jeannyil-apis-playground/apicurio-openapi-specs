@@ -10,7 +10,7 @@ info:
     name: MIT License
     url: https://opensource.org/licenses/MIT
 servers:
-- url: http://sample-json-validation-api.apps.jeannyil.sandbox706.opentlc.com
+- url: http://sample-json-validation-api.apps.jeannyil.sandbox500.opentlc.com
   description: API Backend URL
 paths:
   /validateMembershipJSON:
@@ -173,7 +173,7 @@ components:
     oauth2:
       flows:
         clientCredentials:
-          tokenUrl: https://sso.apps.jeannyil.sandbox706.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
+          tokenUrl: https://sso.apps.jeannyil.sandbox500.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
             openid: OpenID Connect Protocol
       type: oauth2

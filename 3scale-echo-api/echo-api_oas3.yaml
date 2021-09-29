@@ -120,7 +120,7 @@ components:
     OIDC:
       flows:
         clientCredentials:
-          tokenUrl: https://sso.apps.jeannyil.sandbox706.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
+          tokenUrl: https://sso.apps.jeannyil.sandbox500.opentlc.com/auth/realms/RH3scaleAdminPortal/protocol/openid-connect/token
           scopes:
             openid: OpenID Connect
       type: oauth2
